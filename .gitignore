@@ -1,0 +1,102 @@
+# ============================================================
+# .gitignore — Prueba Tecnica DataKnow (Escenario B — Retail)
+# ============================================================
+# Este archivo le dice a Git que IGNORE estos archivos/carpetas.
+# La prueba (pagina 28 del PDF) penaliza explicitamente:
+#   - Credenciales en el repo
+#   - terraform.tfstate en el repo
+# Por eso aqui los excluimos desde el primer commit.
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+.Python
+.venv/
+venv/
+env/
+ENV/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# --- IDE / Editor ---
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# --- Secretos y credenciales (CRITICO — penalizado por la prueba) ---
+.env
+.env.*
+*.env
+secrets/
+credentials.json
+*.pem
+*.key
+*.pfx
+*.crt
+service-account-*.json
+azure-credentials.json
+
+# --- Terraform / IaC state (CRITICO — penalizado por la prueba) ---
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+terraform.tfvars
+*.auto.tfvars
+crash.log
+override.tf
+override.tf.json
+
+# --- Bicep ---
+*.bicepparam.local
+
+# --- Material confidencial de la empresa (NO subir) ---
+# El enunciado de la prueba es propiedad de DataKnow y esta marcado
+# "Confidencial — Uso interno proceso de seleccion". El repo contiene
+# nuestra SOLUCION, no el enunciado. Se mantiene en disco local pero
+# nunca se versiona ni se publica.
+PRUEBA_1.PDF
+PRUEBA_*.pdf
+PRUEBA_*.PDF
+enunciado*.pdf
+
+# --- Datasets generados (no comiteamos datos pesados) ---
+data-generation/output/
+data-generation/data/
+*.parquet
+*.csv
+*.tsv
+*.jsonl
+# Pero SI permitimos muestras pequenas para evidencia:
+!data-generation/muestras/*
+!docs/*.csv
+
+# --- Logs y temporales ---
+*.log
+logs/
+*.tmp
+*.bak
+*~
+
+# --- Fabric / Jupyter ---
+.ipynb_checkpoints/
+.fabric/
+
+# --- Dependencias node (si usas algun tooling JS) ---
+node_modules/
+dist/
+build/
+
+# --- OS especificos ---
+desktop.ini
+$RECYCLE.BIN/
