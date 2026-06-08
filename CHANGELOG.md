@@ -18,6 +18,15 @@ Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/).
 - Notebook de carga a tablas Delta en el Lakehouse de Fabric.
 - Evidencias de carga (COUNT por tabla, arbol de tablas) en `docs/evidencias/`.
 
+### Added — Infraestructura como Codigo
+- Codigo Terraform en `infra/` con el provider de Microsoft Fabric: workspace,
+  lakehouses Medallion (bronze/silver/gold) y asignaciones de rol parametrizadas.
+- Configuracion multi-entorno (`environments/dev.tfvars`, `prod.tfvars`).
+- Estado remoto en HCP Terraform (ejecucion local con Azure CLI).
+- Evidencias de despliegue en `docs/evidencias/fase2/`.
+
 ### Notes
 - `trans_ventas` contiene 1.001.000 filas (1.000.000 + 1.000 duplicados
   inyectados como anomalia para validar la deduplicacion en Silver).
+- El entorno dev se despliega con Terraform; el entorno prod existe en Fabric
+  y `prod.tfvars` documenta su parametrizacion equivalente.

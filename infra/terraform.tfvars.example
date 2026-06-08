@@ -1,0 +1,5 @@
+# Copiar a terraform.tfvars y completar con valores reales.
+# terraform.tfvars esta en .gitignore y no se versiona.
+
+tenant_id   = "00000000-0000-0000-0000-000000000000"
+capacity_id = "00000000-0000-0000-0000-000000000000"

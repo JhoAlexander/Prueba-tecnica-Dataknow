@@ -101,7 +101,7 @@ python data-generation/generador.py
 ## 5. Estado del proyecto
 
 - [x] Generacion de datos sinteticos y carga al Lakehouse
-- [ ] Infraestructura en Fabric
+- [x] Infraestructura como Codigo en Fabric (Terraform)
 - [ ] Pipeline Medallion (Bronze, Silver, Gold)
 - [ ] Orquestacion y alertas
 - [ ] Gobierno, roles y catalogo
@@ -112,6 +112,7 @@ python data-generation/generador.py
 
 - **Formato de tabla:** Delta Lake (ACID, versionado, time travel) sobre Parquet
 - **Generacion de datos:** Python + Faker, reproducible con semilla fija
+- **IaC:** Terraform con el provider oficial de Fabric; estado remoto en HCP Terraform
 - **Orquestacion:** Fabric Data Pipelines (integrado, sin servidor adicional)
 
 ---

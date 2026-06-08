@@ -1,0 +1,33 @@
+﻿{
+  "environment": {
+    "sensitive": false,
+    "type": "string",
+    "value": "dev"
+  },
+  "lakehouse_ids": {
+    "sensitive": false,
+    "type": [
+      "object",
+      {
+        "bronze": "string",
+        "gold": "string",
+        "silver": "string"
+      }
+    ],
+    "value": {
+      "bronze": "5d469c7d-d1b6-4166-89df-3caa8b8e6dc1",
+      "gold": "07875980-48ed-4203-95cc-c992a1e7e37a",
+      "silver": "cca20c1b-8219-4641-88e0-16fc9cf3be56"
+    }
+  },
+  "workspace_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "60259c60-ec61-406c-94c9-305e41badf4c"
+  },
+  "workspace_url": {
+    "sensitive": false,
+    "type": "string",
+    "value": "https://app.fabric.microsoft.com/groups/60259c60-ec61-406c-94c9-305e41badf4c"
+  }
+}
