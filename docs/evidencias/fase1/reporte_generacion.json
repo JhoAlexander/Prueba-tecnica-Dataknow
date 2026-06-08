@@ -1,0 +1,254 @@
+{
+  "fecha_ejecucion": "2026-06-07T23:42:07.875926",
+  "seed": 42,
+  "rango_temporal": {
+    "start": "2025-06-01",
+    "end": "2026-05-31"
+  },
+  "volumenes_solicitados": {
+    "mstr_proveedores": 800,
+    "mstr_tiendas": 150,
+    "mstr_articulos": 5000,
+    "crm_miembros": 50000,
+    "trans_ventas": 1000000,
+    "inv_stock_diario": 750000,
+    "post_devoluciones": 50000
+  },
+  "volumenes_generados": {
+    "MSTR_PROVEEDORES": 800,
+    "MSTR_TIENDAS": 150,
+    "MSTR_ARTICULOS": 5000,
+    "CRM_MIEMBROS": 50000,
+    "TRANS_VENTAS": 1001000,
+    "INV_STOCK_DIARIO": 750000,
+    "POST_DEVOLUCIONES": 50000
+  },
+  "total_filas": 1856950,
+  "tiempos_segundos": {
+    "MSTR_PROVEEDORES": 0.13,
+    "MSTR_TIENDAS": 0.02,
+    "MSTR_ARTICULOS": 0.54,
+    "CRM_MIEMBROS": 0.15,
+    "TRANS_VENTAS": 6.05,
+    "INV_STOCK_DIARIO": 0.7,
+    "POST_DEVOLUCIONES": 0.35,
+    "anomalies": 0.27
+  },
+  "tiempo_total_segundos": 27.5,
+  "formatos_exportados": [
+    "csv",
+    "parquet"
+  ],
+  "rutas_archivos": {
+    "MSTR_PROVEEDORES": {
+      "csv": "C:\\Users\\ASUS\\Desktop\\Prueba ingenieria\\data-generation\\output\\mstr_proveedores.csv",
+      "parquet": "C:\\Users\\ASUS\\Desktop\\Prueba ingenieria\\data-generation\\output\\mstr_proveedores.parquet",
+      "muestra": "C:\\Users\\ASUS\\Desktop\\Prueba ingenieria\\data-generation\\muestras\\mstr_proveedores_muestra.csv"
+    },
+    "MSTR_TIENDAS": {
+      "csv": "C:\\Users\\ASUS\\Desktop\\Prueba ingenieria\\data-generation\\output\\mstr_tiendas.csv",
+      "parquet": "C:\\Users\\ASUS\\Desktop\\Prueba ingenieria\\data-generation\\output\\mstr_tiendas.parquet",
+      "muestra": "C:\\Users\\ASUS\\Desktop\\Prueba ingenieria\\data-generation\\muestras\\mstr_tiendas_muestra.csv"
+    },
+    "MSTR_ARTICULOS": {
+      "csv": "C:\\Users\\ASUS\\Desktop\\Prueba ingenieria\\data-generation\\output\\mstr_articulos.csv",
+      "parquet": "C:\\Users\\ASUS\\Desktop\\Prueba ingenieria\\data-generation\\output\\mstr_articulos.parquet",
+      "muestra": "C:\\Users\\ASUS\\Desktop\\Prueba ingenieria\\data-generation\\muestras\\mstr_articulos_muestra.csv"
+    },
+    "CRM_MIEMBROS": {
+      "csv": "C:\\Users\\ASUS\\Desktop\\Prueba ingenieria\\data-generation\\output\\crm_miembros.csv",
+      "parquet": "C:\\Users\\ASUS\\Desktop\\Prueba ingenieria\\data-generation\\output\\crm_miembros.parquet",
+      "muestra": "C:\\Users\\ASUS\\Desktop\\Prueba ingenieria\\data-generation\\muestras\\crm_miembros_muestra.csv"
+    },
+    "TRANS_VENTAS": {
+      "csv": "C:\\Users\\ASUS\\Desktop\\Prueba ingenieria\\data-generation\\output\\trans_ventas.csv",
+      "parquet": "C:\\Users\\ASUS\\Desktop\\Prueba ingenieria\\data-generation\\output\\trans_ventas.parquet",
+      "muestra": "C:\\Users\\ASUS\\Desktop\\Prueba ingenieria\\data-generation\\muestras\\trans_ventas_muestra.csv"
+    },
+    "INV_STOCK_DIARIO": {
+      "csv": "C:\\Users\\ASUS\\Desktop\\Prueba ingenieria\\data-generation\\output\\inv_stock_diario.csv",
+      "parquet": "C:\\Users\\ASUS\\Desktop\\Prueba ingenieria\\data-generation\\output\\inv_stock_diario.parquet",
+      "muestra": "C:\\Users\\ASUS\\Desktop\\Prueba ingenieria\\data-generation\\muestras\\inv_stock_diario_muestra.csv"
+    },
+    "POST_DEVOLUCIONES": {
+      "csv": "C:\\Users\\ASUS\\Desktop\\Prueba ingenieria\\data-generation\\output\\post_devoluciones.csv",
+      "parquet": "C:\\Users\\ASUS\\Desktop\\Prueba ingenieria\\data-generation\\output\\post_devoluciones.parquet",
+      "muestra": "C:\\Users\\ASUS\\Desktop\\Prueba ingenieria\\data-generation\\muestras\\post_devoluciones_muestra.csv"
+    }
+  },
+  "anomalias": {
+    "duplicates": {
+      "cantidad": 1000,
+      "ids_originales": [
+        836636,
+        216289,
+        475331,
+        643999,
+        32358,
+        535778,
+        895905,
+        458351,
+        948720,
+        833688,
+        859189,
+        248594,
+        412269,
+        498138,
+        4700,
+        838605,
+        979524,
+        750680,
+        611637,
+        290438
+      ],
+      "ids_nuevos": [
+        1000001,
+        1000002,
+        1000003,
+        1000004,
+        1000005,
+        1000006,
+        1000007,
+        1000008,
+        1000009,
+        1000010,
+        1000011,
+        1000012,
+        1000013,
+        1000014,
+        1000015,
+        1000016,
+        1000017,
+        1000018,
+        1000019,
+        1000020
+      ],
+      "total_filas_despues": 1001000
+    },
+    "future_dates": {
+      "cantidad": 50,
+      "ids_afectados": [
+        154726,
+        978627,
+        81714,
+        681933,
+        938281,
+        455480,
+        356144,
+        785149,
+        102618,
+        440662,
+        393770,
+        88591,
+        75084,
+        651776,
+        478477,
+        413166,
+        932678,
+        310004,
+        976677,
+        559474,
+        291824,
+        353493,
+        565872,
+        391504,
+        691120,
+        356890,
+        654464,
+        988128,
+        966198,
+        964534,
+        537836,
+        903360,
+        252310,
+        171772,
+        930182,
+        454089,
+        721952,
+        359847,
+        241245,
+        323775,
+        497553,
+        914675,
+        333974,
+        941470,
+        801446,
+        292092,
+        780717,
+        665300,
+        188203,
+        155324
+      ],
+      "rango_fechas": [
+        "2027-01-01",
+        "2027-12-31"
+      ]
+    },
+    "negative_amounts": {
+      "cantidad": 30,
+      "ids_afectados": [
+        992045,
+        14403,
+        714761,
+        373027,
+        245593,
+        180515,
+        1000702,
+        338414,
+        988316,
+        389457,
+        318490,
+        598847,
+        325882,
+        871575,
+        686496,
+        334843,
+        38111,
+        54412,
+        562632,
+        50537,
+        883713,
+        542327,
+        845987,
+        871157,
+        538395,
+        515332,
+        206846,
+        118384,
+        537390,
+        986206
+      ]
+    },
+    "orphan_refs": {
+      "cantidad": 20,
+      "ids_afectados": [
+        568005,
+        855324,
+        87896,
+        190225,
+        809622,
+        127636,
+        985786,
+        810904,
+        318269,
+        196725,
+        87251,
+        175523,
+        476894,
+        844953,
+        79889,
+        486478,
+        128630,
+        403237,
+        511134,
+        227657
+      ],
+      "art_id_huerfano_usado": 99999
+    },
+    "summary": {
+      "filas_iniciales": 1000000,
+      "filas_finales": 1001000,
+      "filas_anomalas_total": 1100
+    }
+  }
+}
