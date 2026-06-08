@@ -1,0 +1,101 @@
+id_proveedor,razon_social,pais_origen,tiempo_repo_dias,calificacion_calidad,activo
+1,González Villamizar and Vargas S.A.,ES,4,3.36,True
+2,Galvis Ltd S.A.,MX,4,4.09,True
+3,Galindo García and Salazar S.A.,BR,32,3.94,True
+4,López and Sons Co. Ltd.,CN,22,3.75,True
+5,Agudelo Londoño and Becerra S.A.S.,CO,6,3.54,True
+6,Vásquez Torres and Fernández S.R.L.,AR,6,4.28,True
+7,Uribe and Sons S.A.,ES,4,3.66,True
+8,Salazar Castro and Rojas S.L.,ES,2,3.62,True
+9,López-Rivera S.A.S.,CO,7,3.86,True
+10,Sanabria-Agudelo Inc.,US,4,4.82,True
+11,Ariza PLC S.A.,MX,7,3.0,True
+12,Cardozo Group Ltda.,BR,3,4.26,True
+13,Caicedo Ltd Group,CN,5,2.66,True
+14,Rivas Morales and Ramírez S.L.U.,ES,8,3.93,True
+15,Gómez and Sons S.A. de C.V.,MX,9,,True
+16,Bustamante-Ordóñez S.A.S.,CO,9,4.09,True
+17,Rivera Group Corp.,US,3,3.9,True
+18,Palacio Pérez and Mosquera S.A.,CO,12,3.46,True
+19,Ortiz Cuesta and Jaimes S.A.,ES,5,3.82,True
+20,Acevedo Lozano and Vargas Group,CN,11,3.65,True
+21,Rivera-Villamil S.A.,ES,7,3.33,True
+22,Pacheco Torres and Valencia S.A. de C.V.,MX,3,3.63,True
+23,Torres Inc S.R.L.,AR,6,3.92,True
+24,Castillo-Martínez Ltda.,BR,9,3.34,True
+25,Pardo Álvarez and Hoyos S.L.,ES,11,3.32,True
+26,Loaiza-Franco & Cia.,CO,7,2.98,True
+27,Ortiz and Sons LLC,US,19,4.03,True
+28,Londoño Muñoz and Orozco S.A.,CO,14,4.13,True
+29,Castillo Torres and Bolívar Ltda.,CO,6,3.94,True
+30,Rincón Tovar and Prieto Co. Ltd.,CN,12,4.38,True
+31,Pineda Ltd Trading Co.,CN,24,3.85,True
+32,Hurtado-Flórez S.R.L.,AR,24,4.04,True
+33,Orjuela Contreras and Domínguez S.A. de C.V.,MX,4,3.98,True
+34,Duarte Inc S.A.,MX,4,3.75,True
+35,Loaiza Espinosa and Solano LLC,US,18,3.48,True
+36,González-Mejía S.A.,CO,4,5.0,True
+37,Rodríguez-Camargo S.A.S.,CO,3,3.53,True
+38,Ortiz Sierra and Díaz LLC,US,6,3.4,True
+39,Polo LLC S.A.S.,CO,10,4.06,True
+40,Palacios Ramírez and Arias Co. Ltd.,CN,7,3.95,True
+41,Montoya PLC S.A.,MX,5,2.96,True
+42,Carvajal Group S.A.,ES,5,4.47,True
+43,González LLC Trading Co.,CN,5,3.74,True
+44,Moreno-Moreno S.C.,MX,4,3.13,True
+45,Erazo García and Reyes S.A.,ES,29,4.51,True
+46,Mantilla PLC S.A.,ES,9,4.18,True
+47,Hernández Group S.C.,MX,13,3.04,True
+48,Pérez Silva and Calderón S.A.,CO,6,4.87,True
+49,Oviedo Ltd Group,CN,7,4.2,True
+50,Ramírez Álvarez and Barragán & Cia.,CO,5,3.79,True
+51,Arias Maldonado and Cárdenas S.A.S.,CO,2,4.75,True
+52,Torres LLC S.A.S.,CO,3,3.9,True
+53,Fernández and Sons S.A.,ES,2,3.78,True
+54,Torres García and Barrera Trading Co.,CN,2,3.4,True
+55,Martínez Inc Co. Ltd.,CN,4,4.15,True
+56,García-Moreno S.A.,ES,16,4.09,True
+57,Reyes Montoya and Vanegas Corp.,US,7,3.81,True
+58,Escobar Vargas and Ortega Corp.,US,16,3.33,True
+59,Ramírez-López & Cia.,CO,9,3.88,True
+60,Mosquera-Peña Ltda.,CO,12,3.76,True
+61,Martínez Arango and Jaimes Trading Co.,CN,4,3.0,True
+62,Castillo LLC LLC,US,10,2.92,True
+63,Vargas and Sons Inc.,US,11,4.14,True
+64,Cardona Salazar and Castro S.L.,ES,5,,True
+65,Pulido Inc Trading Co.,CN,10,3.92,False
+66,Montes-Ordóñez LLC,US,10,3.51,True
+67,Martínez PLC Corp.,US,5,4.58,True
+68,Tamayo and Sons S.A.,MX,4,3.5,False
+69,Parra Group S.A.,CO,4,4.2,True
+70,Leal Inc S.A.,MX,8,3.56,False
+71,Rivera Group & Cia.,CO,9,,True
+72,Carmona-Serna S.C.,MX,5,,True
+73,Salazar-Yepes Ltda.,BR,8,3.52,True
+74,Durán Reyes and Díaz & Cia.,CO,10,4.4,True
+75,Tamayo PLC S.A.,CO,11,3.2,True
+76,Ríos Cano and Martínez & Cia.,CO,19,3.98,True
+77,Acosta Villegas and Contreras S.A.S.,CO,16,4.35,False
+78,Salamanca Inc Trading Co.,CN,4,4.2,True
+79,García Inc Corp.,US,20,4.95,True
+80,Prieto Parra and Ibarra S.L.,ES,5,3.34,False
+81,Vargas Hurtado and Beltrán Group,CN,14,2.97,True
+82,Navarro-Ospina S.A. de C.V.,MX,8,3.2,True
+83,Betancur-Ramírez S.A.,ES,6,4.2,True
+84,Álvarez Ortiz and Hernández & Cia.,CO,2,4.1,True
+85,Suárez Ruiz and Espinosa Ltda.,CO,7,3.86,True
+86,Rodríguez PLC S.A.,CO,3,3.13,True
+87,Orjuela García and Rojas Trading Co.,CN,13,4.26,True
+88,Hernández-Romero LLC,US,18,3.07,True
+89,Cuéllar LLC & Cia.,CO,5,4.5,True
+90,Sánchez-Palacio Inc.,US,9,5.0,True
+91,Suárez Castrillón and Arévalo & Cia.,CO,5,4.02,True
+92,Rodríguez Ayala and Suárez Group,CN,5,4.15,True
+93,López Monsalve and Ortiz S.C.,MX,12,3.5,True
+94,Villamizar and Sons S.C.,MX,7,2.71,False
+95,Castro-Rojas S.A. de C.V.,MX,21,3.44,True
+96,Ramírez-Acevedo Group,CN,6,3.14,True
+97,Mora-Vargas S.C.,MX,13,2.93,True
+98,López Group S.A.S.,CO,8,4.83,True
+99,Gómez-Quintero Ltda.,CO,12,3.96,True
+100,Henao LLC S.R.L.,AR,6,4.03,True

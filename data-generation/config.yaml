@@ -1,0 +1,155 @@
+# Parametros de generacion de datos sinteticos — RetailMax
+
+# Semilla para reproducibilidad
+random_seed: 42
+
+# Rango temporal (12 meses)
+date_range:
+  start: "2025-06-01"
+  end:   "2026-05-31"
+
+# Volumen de filas por tabla
+volumes:
+  mstr_proveedores:    800
+  mstr_tiendas:        150
+  mstr_articulos:    5000
+  crm_miembros:     50000
+  trans_ventas:   1000000
+  inv_stock_diario: 750000
+  post_devoluciones: 50000
+
+# Paises de operacion con su peso relativo y locale Faker
+countries:
+  - code: CO
+    name: Colombia
+    weight: 0.40
+    locale: es_CO
+  - code: MX
+    name: Mexico
+    weight: 0.25
+    locale: es_MX
+  - code: CL
+    name: Chile
+    weight: 0.15
+    locale: es_CL
+  - code: PE
+    name: Peru
+    weight: 0.12
+    locale: es_ES
+  - code: EC
+    name: Ecuador
+    weight: 0.08
+    locale: es_ES
+
+# Macro categorias de producto
+categories_n1:
+  - id: 1
+    name: "Alimentos y bebidas"
+    weight: 0.30
+  - id: 2
+    name: "Cuidado personal e higiene"
+    weight: 0.18
+  - id: 3
+    name: "Hogar y limpieza"
+    weight: 0.17
+  - id: 4
+    name: "Electronica y tecnologia"
+    weight: 0.12
+  - id: 5
+    name: "Ropa y calzado basico"
+    weight: 0.13
+  - id: 6
+    name: "Bebes y maternidad"
+    weight: 0.10
+
+# Centros de distribucion regionales
+distribution_centers:
+  - id: 1
+    city: "Bogota"
+    country: CO
+    coverage: [CO]
+  - id: 2
+    city: "Ciudad de Mexico"
+    country: MX
+    coverage: [MX]
+  - id: 3
+    city: "Santiago de Chile"
+    country: CL
+    coverage: [CL, PE, EC]
+
+# Tipos de tienda
+store_types:
+  - code: HIPER
+    name: "Hipermercado"
+    weight: 0.10
+    avg_sqm: 8000
+  - code: SUPER
+    name: "Supermercado de barrio"
+    weight: 0.45
+    avg_sqm: 1500
+  - code: CONVE
+    name: "Tienda de conveniencia"
+    weight: 0.45
+    avg_sqm: 250
+
+# Canales de venta
+sales_channels:
+  - code: TIENDA
+    name: "Tienda fisica"
+    weight: 0.55
+  - code: WEB
+    name: "Ecommerce propio"
+    weight: 0.25
+  - code: MKT
+    name: "Marketplace"
+    weight: 0.15
+  - code: APP
+    name: "App movil"
+    weight: 0.05
+
+# Parametros de calidad de datos
+quality:
+  null_rate: 0.05
+  anomalies:
+    duplicates_ratio: 0.001
+    future_dates_count: 50
+    negative_amounts_count: 30
+    orphan_refs_count: 20
+
+# Distribuciones para realismo estadistico
+distributions:
+  hour_peaks: [12, 19]
+  hour_peak_std: 2.5
+  monthly_seasonality:
+    1:  0.85
+    2:  0.80
+    3:  0.90
+    4:  0.95
+    5:  1.00
+    6:  1.05
+    7:  1.10
+    8:  1.00
+    9:  0.95
+    10: 1.10
+    11: 1.40
+    12: 1.60
+  age_mean: 35
+  age_std: 12
+  ticket_lognormal_mu: 10.0
+  ticket_lognormal_sigma: 0.8
+
+# Salida de archivos
+output:
+  base_path: "output"
+  formats:
+    - csv
+    - parquet
+  sample_rows_per_table: 100
+
+# Destino en Microsoft Fabric
+fabric:
+  workspace_name: "RetailMax-Lab-DataKnow"
+  lakehouse_fuente: "lakehouse_retailmax_fuente"
+  lakehouse_medallion: "lakehouse_retailmax"
+  load_mode: "truncate_load"
+  batch_size: 1000
