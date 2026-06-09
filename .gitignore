@@ -1,8 +1,8 @@
-# ============================================================
-# .gitignore — Prueba Tecnica DataKnow (Escenario B — Retail)
-# ============================================================
-#   - Credenciales en el repo
-#   - terraform.tfstate en el repo
+# .gitignore
+
+# --- Documentos locales (no versionar PDFs) ---
+*.pdf
+*.PDF
 
 # --- Python ---
 __pycache__/
@@ -56,12 +56,6 @@ override.tf.json
 # --- Bicep ---
 *.bicepparam.local
 
-# --- Prueba ---
-
-PRUEBA_1.PDF
-PRUEBA_*.pdf
-PRUEBA_*.PDF
-enunciado*.pdf
 
 # --- Datasets generados  ---
 data-generation/output/
