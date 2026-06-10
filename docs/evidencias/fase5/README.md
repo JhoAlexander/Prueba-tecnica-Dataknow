@@ -23,3 +23,16 @@ reporte diario tienen su evidencia en `docs/evidencias/fase4/`.
 
 El catalogo de las capas Silver y Gold (campos, tipos, origen y sensibilidad)
 esta en `docs/catalogo.md`, autogenerado por `docs/gen_catalogo.py`.
+
+# Dashboard ejecutivo
+
+Captura del dashboard ejecutivo en Power BI, conectado en Direct Lake sobre la
+capa Gold.
+
+| Archivo | Que muestra |
+|---|---|
+| `dashboard_ejecutivo.png` | Vista general: KPIs, ventas por pais y canal, tendencia diaria (actual vs semana anterior), top 10 de articulos y tasa de descuento por categoria |
+
+El modelo semantico (esquema en estrella), las relaciones, las medidas DAX y las
+notas de implementacion se documentan en
+[../../dashboard_ejecutivo.md](../../dashboard_ejecutivo.md).

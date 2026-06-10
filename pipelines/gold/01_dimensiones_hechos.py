@@ -99,6 +99,7 @@ fact_ventas = (leer("trans_ventas")
     .withColumn("vr_venta_neto", F.round(F.col("vr_venta_bruto") - F.col("descuento_aplicado"), 2))
     .withColumn("ind_descuento", F.col("descuento_aplicado") > 0)
     .withColumn("id_cliente", F.coalesce(F.col("id_miembro").cast("string"), F.lit("ANONIMO")))
+    .withColumn("fec_trans", F.to_date("fec_trans"))   # fecha pura; la hora vive en hra_trans
     .select("id_trans", "id_cliente", "id_miembro", "id_tienda", "art_id",
             "fec_trans", "hra_trans", "qty_vendida", "precio_unitario_venta",
             "descuento_aplicado", "vr_venta_bruto", "vr_venta_neto",
