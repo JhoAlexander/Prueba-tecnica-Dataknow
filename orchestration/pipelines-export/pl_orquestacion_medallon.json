@@ -1,0 +1,168 @@
+﻿{
+  "properties": {
+    "activities": [
+      {
+        "name": "Bronze",
+        "type": "TridentNotebook",
+        "dependsOn": [],
+        "policy": {
+          "timeout": "0.00:30:00",
+          "retry": 3,
+          "retryIntervalInSeconds": 60,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "notebookId": "557fc509-5510-424c-b63f-73e057742a1a",
+          "workspaceId": "60259c60-ec61-406c-94c9-305e41badf4c"
+        }
+      },
+      {
+        "name": "Silver",
+        "type": "TridentNotebook",
+        "dependsOn": [
+          {
+            "activity": "Bronze",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "policy": {
+          "timeout": "0.00:30:00",
+          "retry": 3,
+          "retryIntervalInSeconds": 60,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "notebookId": "222d1d59-6619-4287-b584-09a42a3ad343",
+          "workspaceId": "60259c60-ec61-406c-94c9-305e41badf4c"
+        }
+      },
+      {
+        "name": "Gold_Dim_Hechos",
+        "type": "TridentNotebook",
+        "dependsOn": [
+          {
+            "activity": "Silver",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "policy": {
+          "timeout": "0.00:30:00",
+          "retry": 3,
+          "retryIntervalInSeconds": 60,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "notebookId": "365464fc-b701-4dc8-ad2f-f6dc44b4a06e",
+          "workspaceId": "60259c60-ec61-406c-94c9-305e41badf4c"
+        }
+      },
+      {
+        "name": "Gold_Agregados",
+        "type": "TridentNotebook",
+        "dependsOn": [
+          {
+            "activity": "Gold_Dim_Hechos",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "policy": {
+          "timeout": "0.00:20:00",
+          "retry": 3,
+          "retryIntervalInSeconds": 60,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "notebookId": "cfcd79a4-b9b2-4227-9a06-d3e805503079",
+          "workspaceId": "60259c60-ec61-406c-94c9-305e41badf4c"
+        }
+      },
+      {
+        "name": "Data_Quality",
+        "type": "TridentNotebook",
+        "dependsOn": [
+          {
+            "activity": "Gold_Agregados",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "policy": {
+          "timeout": "0.00:15:00",
+          "retry": 3,
+          "retryIntervalInSeconds": 60,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "notebookId": "163df762-6d69-40e5-bbbd-983227cb6644",
+          "workspaceId": "60259c60-ec61-406c-94c9-305e41badf4c"
+        }
+      },
+      {
+        "name": "Reporte_Exito",
+        "type": "Office365Email",
+        "dependsOn": [
+          {
+            "activity": "Data_Quality",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "to": "jhhoany@hotmail.com",
+          "subject": "[EXITO] Pipeline pl_orquestacion_medallon completado",
+          "body": "<p>El pipeline pl_orquestacion_medallon se completo exitosamente.</p>\n<p>Hora del trigger: @{pipeline().TriggerTime}</p>\n<p>Las 5 capas (Bronze, Silver, Gold dim/hechos, Gold agregados, Data Quality) finalizaron correctamente.</p>\n<p>Metricas detalladas en las tablas de control: _log_ingesta (Bronze), _reporte_calidad (Silver) y _resultados_dq (Gold).</p>"
+        },
+        "externalReferences": {
+          "connection": "c47297a9-558e-48cc-a412-f74fe2b082f2"
+        }
+      },
+      {
+        "name": "Alerta_Fallo",
+        "type": "Office365Email",
+        "dependsOn": [
+          {
+            "activity": "Silver",
+            "dependencyConditions": [
+              "Failed"
+            ]
+          }
+        ],
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "to": "jhhoany@hotmail.com",
+          "subject": "[FALLO] Pipeline pl_orquestacion_medallon",
+          "body": "<p>El pipeline pl_orquestacion_medallon fallo durante su ejecucion.</p>\n<p>Revisa la tarea que fallo en el Monitor Hub de Fabric.</p>\n<p>Hora del trigger: @{pipeline().TriggerTime}</p>"
+        },
+        "externalReferences": {
+          "connection": "b431e529-463c-40c3-a9fc-394652b599bd"
+        }
+      }
+    ]
+  }
+}

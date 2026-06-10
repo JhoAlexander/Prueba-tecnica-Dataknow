@@ -17,7 +17,7 @@ Trigger (programado / manual)
 Las dependencias son explicitas: cada capa inicia solo cuando la anterior
 finaliza con exito.
 
-## Configuracion
+## Configuracion 
 
 - Ejecucion programada diaria (02:00, America/Bogota)
 - Reintentos con backoff exponencial
@@ -34,3 +34,5 @@ schedules/           Configuracion de triggers
 alerts/              Reglas de alerta
 evidencias/          Capturas de ejecucion
 ```
+
+
