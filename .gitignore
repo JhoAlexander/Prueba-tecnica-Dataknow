@@ -1,9 +1,5 @@
 # .gitignore
 
-# --- Documentos locales (no versionar PDFs) ---
-*.pdf
-*.PDF
-
 # --- Python ---
 __pycache__/
 *.py[cod]
