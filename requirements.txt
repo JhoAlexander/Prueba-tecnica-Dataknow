@@ -3,7 +3,7 @@ Faker==40.21.0
 greenlet==3.5.1
 numpy==2.4.6
 pandas==3.0.3
-pyarrow==24.0.0
+pyarrow==24.0.0  # escritura de archivos Parquet
 python-dateutil==2.9.0.post0
 python-dotenv==1.2.2
 PyYAML==6.0.3
