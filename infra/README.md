@@ -10,7 +10,7 @@ silver y gold) de forma reproducible y parametrizada por entorno.
 - Terraform >= 1.8
 - Azure CLI (`az`)
 - Sesion iniciada: `az login --allow-no-subscriptions`
-- Capacidad de Fabric (trial o F2+)
+- Capacidad de Fabric (trial)
 
 ## Archivos
 
